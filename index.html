@@ -191,7 +191,7 @@
         <div class="info-card">
           <i class="fas fa-clock info-icon" aria-hidden="true"></i>
           <p class="info-title">Início</p>
-          <p class="info-value">20h00</p>
+          <p class="info-value">19h45</p>
         </div>
         <div class="info-card">
           <i class="fas fa-music info-icon" aria-hidden="true"></i>
@@ -305,8 +305,8 @@
       }, { threshold: 0.08 });
       document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
 
-      // Countdown — 10/10/2026 19:00
-      const eventDate = new Date('2026-10-10T19:00:00');
+      // Countdown — 10/10/2026 19:45
+      const eventDate = new Date('2026-10-10T19:45:00');
       const pad = n => String(Math.floor(n)).padStart(2, '0');
       function tick() {
         const diff = eventDate - new Date();
