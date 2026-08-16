@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lanna — 15 Anos</title>
+  <meta name="description" content="Save the Date! Lanna celebra seus 15 anos em 10 de outubro de 2026.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&family=Great+Vibes&family=Playfair+Display:ital,wght@1,700;1,800&family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css?v=2">
+</head>
+<body>
+
+  <div class="bg-image" aria-hidden="true"></div>
+  <div class="sparkles-container" id="sparkles-container" aria-hidden="true"></div>
+
+  <!-- INTRO OVERLAY -->
+  <div id="intro-overlay" class="intro-overlay">
+    <div class="intro-card-wrapper" id="intro-card-wrapper">
+
+      <div class="intro-card">
+        <span class="card-corner card-corner--tl">❋</span>
+        <span class="card-corner card-corner--tr">❋</span>
+        <span class="card-corner card-corner--bl">❋</span>
+        <span class="card-corner card-corner--br">❋</span>
+
+        <div class="card-body-inner">
+          <h1 class="card-name">Lanna</h1>
+          <span class="card-heart" aria-hidden="true">♡</span>
+          <p class="card-celebra">celebra seus</p>
+          <p class="card-age">15 <em>anos</em></p>
+          <div class="card-rule"><span></span><span class="card-dot">♥</span><span></span></div>
+          <p class="card-date">10 · 10 · 2026</p>
+        </div>
+      </div>
+
+      <p class="intro-tap-hint">Toque para abrir</p>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <main id="main-content" class="main-content">
+
+    <!-- HERO — full-screen save the date look -->
+    <section class="hero-section">
+
+      <!-- Hero content -->
+      <div class="hero-content">
+        <h1 class="hero-name">Lanna</h1>
+
+        <p class="celebra-text">celebra seus</p>
+        <p class="hero-age">15 <span>anos</span></p>
+
+        <div class="frame-rule" aria-hidden="true">
+          <span class="fr-line"></span><span class="fr-heart">♥</span><span class="fr-line"></span>
+        </div>
+        <p class="hero-date">10 <span class="bullet">•</span> 10 <span class="bullet">•</span> 2026</p>
+
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="scroll-hint" id="scroll-hint" aria-hidden="true">
+        <span class="scroll-text">role para ver mais</span>
+        <i class="fas fa-chevron-down scroll-chevron"></i>
+      </div>
+
+    </section>
+
+    <!-- INVITE MESSAGE -->
+    <section class="content-section fade-in">
+      <div class="section-rule" aria-hidden="true">
+        <span class="sr-line"></span><span class="sr-heart">♡</span><span class="sr-line"></span>
+      </div>
+      <p class="invite-text">
+        Com imensa alegria e muito amor,<br>
+        convidamos você para celebrar<br>
+        esta noite tão especial.
+      </p>
+    </section>
+
+    <!-- COUNTDOWN -->
+    <section class="content-section fade-in" aria-label="Contagem regressiva">
+      <p class="section-eyebrow">A festa começa em</p>
+      <div class="countdown-grid" id="countdown">
+        <div class="count-box">
+          <span class="count-num" id="cd-days">--</span>
+          <span class="count-lbl">dias</span>
+        </div>
+        <span class="count-colon" aria-hidden="true">:</span>
+        <div class="count-box">
+          <span class="count-num" id="cd-hours">--</span>
+          <span class="count-lbl">horas</span>
+        </div>
+        <span class="count-colon" aria-hidden="true">:</span>
+        <div class="count-box">
+          <span class="count-num" id="cd-mins">--</span>
+          <span class="count-lbl">min</span>
+        </div>
+        <span class="count-colon" aria-hidden="true">:</span>
+        <div class="count-box">
+          <span class="count-num" id="cd-secs">--</span>
+          <span class="count-lbl">seg</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="content-section fade-in gallery-section" aria-label="Galeria de fotos">
+      <div class="section-rule" aria-hidden="true">
+        <span class="sr-line"></span><span class="sr-heart">♡</span><span class="sr-line"></span>
+      </div>
+      <p class="section-eyebrow">Momentos</p>
+      <p class="gallery-intro">Um pouquinho da Lanna para você se encantar ainda mais</p>
+
+      <div class="gallery-grid" id="gallery-grid">
+        <button class="gallery-item" type="button" data-full="img/web/Lanna_15_anos-14-full.jpg" aria-label="Ampliar foto de Lanna 1">
+          <img src="img/web/Lanna_15_anos-14-thumb.jpg" alt="Lanna sorrindo em seu ensaio de 15 anos" loading="lazy" width="700" height="1050">
+          <span class="gallery-item-icon" aria-hidden="true"><i class="fas fa-expand"></i></span>
+        </button>
+        <button class="gallery-item" type="button" data-full="img/web/Lanna_15_anos-34-full.jpg" aria-label="Ampliar foto de Lanna 2">
+          <img src="img/web/Lanna_15_anos-34-thumb.jpg" alt="Lanna em seu ensaio de 15 anos" loading="lazy" width="700" height="1050">
+          <span class="gallery-item-icon" aria-hidden="true"><i class="fas fa-expand"></i></span>
+        </button>
+        <button class="gallery-item" type="button" data-full="img/web/Lanna_15_anos-41-full.jpg" aria-label="Ampliar foto de Lanna 3">
+          <img src="img/web/Lanna_15_anos-41-thumb.jpg" alt="Lanna em seu ensaio de 15 anos" loading="lazy" width="700" height="1050">
+          <span class="gallery-item-icon" aria-hidden="true"><i class="fas fa-expand"></i></span>
+        </button>
+        <button class="gallery-item" type="button" data-full="img/web/Lanna_15_anos-82-full.jpg" aria-label="Ampliar foto de Lanna 4">
+          <img src="img/web/Lanna_15_anos-82-thumb.jpg" alt="Lanna em seu ensaio de 15 anos" loading="lazy" width="700" height="1050">
+          <span class="gallery-item-icon" aria-hidden="true"><i class="fas fa-expand"></i></span>
+        </button>
+        <button class="gallery-item" type="button" data-full="img/web/Lanna_15_anos-112-full.jpg" aria-label="Ampliar foto de Lanna 5">
+          <img src="img/web/Lanna_15_anos-112-thumb.jpg" alt="Lanna em seu ensaio de 15 anos" loading="lazy" width="700" height="1050">
+          <span class="gallery-item-icon" aria-hidden="true"><i class="fas fa-expand"></i></span>
+        </button>
+        <button class="gallery-item" type="button" data-full="img/web/Lanna_15_anos-125-full.jpg" aria-label="Ampliar foto de Lanna 6">
+          <img src="img/web/Lanna_15_anos-125-thumb.jpg" alt="Lanna em seu ensaio de 15 anos" loading="lazy" width="700" height="1050">
+          <span class="gallery-item-icon" aria-hidden="true"><i class="fas fa-expand"></i></span>
+        </button>
+        <button class="gallery-item" type="button" data-full="img/web/Lanna_15_anos-135-full.jpg" aria-label="Ampliar foto de Lanna 7">
+          <img src="img/web/Lanna_15_anos-135-thumb.jpg" alt="Lanna em seu ensaio de 15 anos" loading="lazy" width="700" height="1050">
+          <span class="gallery-item-icon" aria-hidden="true"><i class="fas fa-expand"></i></span>
+        </button>
+        <button class="gallery-item" type="button" data-full="img/web/Lanna_15_anos-141-full.jpg" aria-label="Ampliar foto de Lanna 8">
+          <img src="img/web/Lanna_15_anos-141-thumb.jpg" alt="Lanna em seu ensaio de 15 anos" loading="lazy" width="700" height="1050">
+          <span class="gallery-item-icon" aria-hidden="true"><i class="fas fa-expand"></i></span>
+        </button>
+        <button class="gallery-item" type="button" data-full="img/web/Lanna_15_anos-144-full.jpg" aria-label="Ampliar foto de Lanna 9">
+          <img src="img/web/Lanna_15_anos-144-thumb.jpg" alt="Lanna em seu ensaio de 15 anos" loading="lazy" width="700" height="467">
+          <span class="gallery-item-icon" aria-hidden="true"><i class="fas fa-expand"></i></span>
+        </button>
+      </div>
+    </section>
+
+    <!-- LOCATION -->
+    <section class="content-section fade-in" aria-label="Local do evento">
+      <div class="section-rule" aria-hidden="true">
+        <span class="sr-line"></span><span class="sr-heart">♡</span><span class="sr-line"></span>
+      </div>
+      <p class="section-eyebrow">Local</p>
+      <p class="venue-name">Espaço Malibu</p>
+      <p class="venue-address">
+        Av. Dr. Francisco Gugliano, 2600<br>
+        Bairro Royal Park · Ribeirão Preto · SP
+      </p>
+    </section>
+
+    <!-- INFO -->
+    <section class="content-section fade-in" aria-label="Informações adicionais">
+      <div class="info-cards">
+        <div class="info-card">
+          <i class="fas fa-star info-icon" aria-hidden="true"></i>
+          <p class="info-title">Traje</p>
+          <p class="info-value">Esporte Fino</p>
+        </div>
+        <div class="info-card">
+          <i class="fas fa-clock info-icon" aria-hidden="true"></i>
+          <p class="info-title">Início</p>
+          <p class="info-value">20h00</p>
+        </div>
+        <div class="info-card">
+          <i class="fas fa-music info-icon" aria-hidden="true"></i>
+          <p class="info-title">Valsa &amp; Parabéns</p>
+          <p class="info-value">23h00</p>
+        </div>
+        <div class="info-card">
+          <i class="fas fa-moon info-icon" aria-hidden="true"></i>
+          <p class="info-title">Encerramento</p>
+          <p class="info-value">2h00</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- NOTICE -->
+    <section class="content-section fade-in">
+      <p class="notice-text">
+        <i class="fas fa-info-circle" aria-hidden="true"></i>
+        Para melhor organização, maiores de idade usarão pulseira para bebidas com álcool.
+      </p>
+    </section>
+
+    <!-- CLOSING -->
+    <section class="content-section fade-in">
+      <div class="section-rule" aria-hidden="true">
+        <span class="sr-line"></span><span class="sr-heart">♡</span><span class="sr-line"></span>
+      </div>
+      <div class="closing-card">
+        <p class="closing-text"><em>Sua presença tornará<br>este momento ainda mais especial.</em></p>
+        <p class="closing-heart" aria-hidden="true">♡</p>
+      </div>
+    </section>
+
+    <div style="height: 95px;"></div>
+  </main>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Foto ampliada">
+    <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Fechar">
+      <i class="fas fa-times" aria-hidden="true"></i>
+    </button>
+    <button class="lightbox-nav lightbox-prev" id="lightbox-prev" type="button" aria-label="Foto anterior">
+      <i class="fas fa-chevron-left" aria-hidden="true"></i>
+    </button>
+    <div class="lightbox-stage">
+      <img class="lightbox-img" id="lightbox-img" src="" alt="">
+      <span class="lightbox-counter" id="lightbox-counter" aria-hidden="true"></span>
+    </div>
+    <button class="lightbox-nav lightbox-next" id="lightbox-next" type="button" aria-label="Próxima foto">
+      <i class="fas fa-chevron-right" aria-hidden="true"></i>
+    </button>
+  </div>
+
+  <!-- FIXED BAR -->
+  <nav class="fixed-action-bar" id="fixed-action-bar" aria-label="Ações rápidas">
+    <div class="fixed-item">
+      <a href="https://www.google.com/maps/search/Espaço+Malibu+Av+Dr+Francisco+Gugliano+2600+Royal+Park+Ribeirão+Preto+SP"
+         target="_blank" rel="noopener noreferrer"
+         class="fixed-btn fixed-btn--map" aria-label="Ver no mapa">
+        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+      </a>
+      <span class="fixed-label">Local</span>
+    </div>
+    <div class="fixed-item fixed-item--featured">
+      <a href="https://wa.me/5516997647740?text=Olá!%20Confirmo%20minha%20presença%20na%20festa%20de%2015%20anos%20da%20Lanna!%20Meu%20nome%20completo%20é%3A%20"
+         target="_blank" rel="noopener noreferrer"
+         class="fixed-btn fixed-btn--whatsapp" aria-label="Confirmar presença pelo WhatsApp">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+      </a>
+      <span class="fixed-label">Confirmar</span>
+    </div>
+    <div class="fixed-item">
+      <button class="fixed-btn fixed-btn--music" id="music-control"
+              aria-label="Tocar ou pausar música" aria-pressed="false">
+        <i class="fas fa-play" id="music-icon" aria-hidden="true"></i>
+      </button>
+      <span class="fixed-label">Música</span>
+    </div>
+  </nav>
+
+  <!-- Adicione: <source src="assets/musica.mp3" type="audio/mpeg"> -->
+  <audio id="bg-music" loop></audio>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      // Sparkles
+      const sc = document.getElementById('sparkles-container');
+      const chars = ['✦','✧','⋆','✶','✸','✹','✺'];
+      for (let i = 0; i < 30; i++) {
+        const el = document.createElement('span');
+        el.className = 'sparkle';
+        el.textContent = chars[Math.floor(Math.random() * chars.length)];
+        el.style.cssText = `left:${(Math.random()*100).toFixed(1)}%;top:${(Math.random()*100).toFixed(1)}%;animation-delay:${(Math.random()*9).toFixed(2)}s;animation-duration:${(4+Math.random()*7).toFixed(2)}s;font-size:${(6+Math.random()*10).toFixed(1)}px;color:${Math.random()>.5?'#c084fc':'#a855f7'};`;
+        sc.appendChild(el);
+      }
+
+      // Intro card
+      const overlay = document.getElementById('intro-overlay');
+      const wrapper = document.getElementById('intro-card-wrapper');
+      wrapper.addEventListener('click', () => {
+        wrapper.classList.add('opening');
+        setTimeout(() => overlay.classList.add('hidden'), 900);
+        tryPlayMusic();
+      });
+
+      // Fade-in observer
+      const obs = new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }});
+      }, { threshold: 0.08 });
+      document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+
+      // Countdown — 10/10/2026 19:00
+      const eventDate = new Date('2026-10-10T19:00:00');
+      const pad = n => String(Math.floor(n)).padStart(2, '0');
+      function tick() {
+        const diff = eventDate - new Date();
+        if (diff <= 0) { document.getElementById('countdown').innerHTML = '<p class="count-celebrate">🎉 É hoje!</p>'; return; }
+        document.getElementById('cd-days').textContent  = pad(diff / 864e5);
+        document.getElementById('cd-hours').textContent = pad((diff % 864e5) / 36e5);
+        document.getElementById('cd-mins').textContent  = pad((diff % 36e5) / 6e4);
+        document.getElementById('cd-secs').textContent  = pad((diff % 6e4) / 1e3);
+      }
+      tick(); setInterval(tick, 1000);
+
+      // Music
+      const music   = document.getElementById('bg-music');
+      const btn     = document.getElementById('music-control');
+      const ico     = document.getElementById('music-icon');
+      let playing   = false;
+      function tryPlayMusic() {
+        music.play().then(() => { playing = true; ico.classList.replace('fa-play','fa-pause'); btn.setAttribute('aria-pressed','true'); }).catch(()=>{});
+      }
+      btn.addEventListener('click', () => {
+        if (playing) { music.pause(); ico.classList.replace('fa-pause','fa-play'); btn.setAttribute('aria-pressed','false'); playing = false; }
+        else tryPlayMusic();
+      });
+
+      setTimeout(() => document.getElementById('fixed-action-bar').classList.add('visible'), 300);
+
+      // Esconde scroll hint ao rolar
+      const scrollHint = document.getElementById('scroll-hint');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 60) scrollHint.classList.add('hidden');
+      }, { passive: true });
+
+      // Gallery lightbox
+      const galleryItems = Array.from(document.querySelectorAll('.gallery-item'));
+      const lightbox      = document.getElementById('lightbox');
+      const lightboxImg   = document.getElementById('lightbox-img');
+      const lightboxCount = document.getElementById('lightbox-counter');
+      const btnClose      = document.getElementById('lightbox-close');
+      const btnPrev       = document.getElementById('lightbox-prev');
+      const btnNext       = document.getElementById('lightbox-next');
+      let currentIndex    = 0;
+
+      function showPhoto(index) {
+        currentIndex = (index + galleryItems.length) % galleryItems.length;
+        const item = galleryItems[currentIndex];
+        lightboxImg.src = item.dataset.full;
+        lightboxImg.alt = item.querySelector('img').alt;
+        lightboxCount.textContent = `${currentIndex + 1} / ${galleryItems.length}`;
+      }
+      function openLightbox(index) {
+        showPhoto(index);
+        lightbox.classList.add('active');
+        document.body.classList.add('lightbox-open');
+      }
+      function closeLightbox() {
+        lightbox.classList.remove('active');
+        document.body.classList.remove('lightbox-open');
+      }
+
+      galleryItems.forEach((item, i) => item.addEventListener('click', () => openLightbox(i)));
+      btnClose.addEventListener('click', closeLightbox);
+      btnPrev.addEventListener('click', () => showPhoto(currentIndex - 1));
+      btnNext.addEventListener('click', () => showPhoto(currentIndex + 1));
+      lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+
+      document.addEventListener('keydown', e => {
+        if (!lightbox.classList.contains('active')) return;
+        if (e.key === 'Escape')      closeLightbox();
+        else if (e.key === 'ArrowLeft')  showPhoto(currentIndex - 1);
+        else if (e.key === 'ArrowRight') showPhoto(currentIndex + 1);
+      });
+
+      // Swipe (touch) navigation
+      let touchStartX = 0;
+      lightbox.addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].clientX; }, { passive: true });
+      lightbox.addEventListener('touchend', e => {
+        const dx = e.changedTouches[0].clientX - touchStartX;
+        if (Math.abs(dx) > 40) showPhoto(currentIndex + (dx < 0 ? 1 : -1));
+      }, { passive: true });
+    });
+  </script>
+</body>
+</html>
