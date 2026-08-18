@@ -18,29 +18,54 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&family=Great+Vibes&family=Playfair+Display:ital,wght@1,700;1,800&family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&family=Great+Vibes&family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css?v=2">
+  <link rel="stylesheet" href="style.css?v=13">
 </head>
 <body>
 
+  <div class="site-wrapper">
+
+  <div class="site-border" aria-hidden="true"></div>
+
   <div class="bg-image" aria-hidden="true"></div>
   <div class="sparkles-container" id="sparkles-container" aria-hidden="true"></div>
+  <div class="butterflies-container" id="butterflies-container" aria-hidden="true"></div>
 
   <!-- INTRO OVERLAY -->
   <div id="intro-overlay" class="intro-overlay">
-    <div class="intro-card-wrapper" id="intro-card-wrapper">
+    <div class="intro-card-wrapper" id="intro-card-wrapper" role="button" tabindex="0" aria-label="Abrir convite">
 
       <div class="intro-card">
-        <span class="card-corner card-corner--tl">❋</span>
-        <span class="card-corner card-corner--tr">❋</span>
-        <span class="card-corner card-corner--bl">❋</span>
-        <span class="card-corner card-corner--br">❋</span>
+        <svg class="card-butterfly" viewBox="0 0 64 48" fill="currentColor" aria-hidden="true">
+          <g class="bfly-wing"><path d="M32 24 C20 4, 2 2, 4 16 C5 26, 18 30, 32 24 Z"/><path d="M32 24 C22 30, 8 34, 10 42 C12 46, 24 40, 32 26 Z" opacity="0.8"/></g>
+          <g class="bfly-wing"><path d="M32 24 C44 4, 62 2, 60 16 C59 26, 46 30, 32 24 Z"/><path d="M32 24 C42 30, 56 34, 54 42 C52 46, 40 40, 32 26 Z" opacity="0.8"/></g>
+          <line x1="32" y1="15" x2="32" y2="35" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+
+        <svg class="card-vine card-vine--tl" viewBox="0 0 40 40" aria-hidden="true">
+          <path d="M3 3 C 9 5, 13 11, 11 19" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/>
+          <path d="M6 7 C 4 5, 2 6, 3 9 C 5 10, 7 9, 6 7 Z" fill="currentColor"/>
+          <path d="M11 14 C 8 13, 7 15, 9 17 C 11 18, 13 16, 11 14 Z" fill="currentColor"/>
+        </svg>
+        <svg class="card-vine card-vine--tr" viewBox="0 0 40 40" aria-hidden="true">
+          <path d="M3 3 C 9 5, 13 11, 11 19" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/>
+          <path d="M6 7 C 4 5, 2 6, 3 9 C 5 10, 7 9, 6 7 Z" fill="currentColor"/>
+          <path d="M11 14 C 8 13, 7 15, 9 17 C 11 18, 13 16, 11 14 Z" fill="currentColor"/>
+        </svg>
+        <svg class="card-vine card-vine--bl" viewBox="0 0 40 40" aria-hidden="true">
+          <path d="M3 3 C 9 5, 13 11, 11 19" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/>
+          <path d="M6 7 C 4 5, 2 6, 3 9 C 5 10, 7 9, 6 7 Z" fill="currentColor"/>
+          <path d="M11 14 C 8 13, 7 15, 9 17 C 11 18, 13 16, 11 14 Z" fill="currentColor"/>
+        </svg>
+        <svg class="card-vine card-vine--br" viewBox="0 0 40 40" aria-hidden="true">
+          <path d="M3 3 C 9 5, 13 11, 11 19" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/>
+          <path d="M6 7 C 4 5, 2 6, 3 9 C 5 10, 7 9, 6 7 Z" fill="currentColor"/>
+          <path d="M11 14 C 8 13, 7 15, 9 17 C 11 18, 13 16, 11 14 Z" fill="currentColor"/>
+        </svg>
 
         <div class="card-body-inner">
-          <h1 class="card-name">Lanna</h1>
+          <p class="card-name">Lanna</p>
           <p class="card-celebra">celebra seus</p>
           <p class="card-age">15 <em>anos</em></p>
           <div class="card-rule"><span></span><span class="card-dot">♥</span><span></span></div>
@@ -75,7 +100,7 @@
       <!-- Scroll indicator -->
       <div class="scroll-hint" id="scroll-hint" aria-hidden="true">
         <span class="scroll-text">role para ver mais</span>
-        <i class="fas fa-chevron-down scroll-chevron"></i>
+        <svg class="scroll-chevron icon" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
       </div>
 
     </section>
@@ -129,39 +154,39 @@
       <div class="gallery-grid" id="gallery-grid">
         <button class="gallery-item" type="button" data-full="img/web/Lanna_15_anos-14-full.jpg" aria-label="Ampliar foto de Lanna 1">
           <img src="img/web/Lanna_15_anos-14-thumb.jpg" alt="Lanna sorrindo em seu ensaio de 15 anos" loading="lazy" width="700" height="1050">
-          <span class="gallery-item-icon" aria-hidden="true"><i class="fas fa-expand"></i></span>
+          <span class="gallery-item-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></span>
         </button>
         <button class="gallery-item" type="button" data-full="img/web/Lanna_15_anos-34-full.jpg" aria-label="Ampliar foto de Lanna 2">
           <img src="img/web/Lanna_15_anos-34-thumb.jpg" alt="Lanna em seu ensaio de 15 anos" loading="lazy" width="700" height="1050">
-          <span class="gallery-item-icon" aria-hidden="true"><i class="fas fa-expand"></i></span>
+          <span class="gallery-item-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></span>
         </button>
         <button class="gallery-item" type="button" data-full="img/web/Lanna_15_anos-41-full.jpg" aria-label="Ampliar foto de Lanna 3">
           <img src="img/web/Lanna_15_anos-41-thumb.jpg" alt="Lanna em seu ensaio de 15 anos" loading="lazy" width="700" height="1050">
-          <span class="gallery-item-icon" aria-hidden="true"><i class="fas fa-expand"></i></span>
+          <span class="gallery-item-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></span>
         </button>
         <button class="gallery-item" type="button" data-full="img/web/Lanna_15_anos-82-full.jpg" aria-label="Ampliar foto de Lanna 4">
           <img src="img/web/Lanna_15_anos-82-thumb.jpg" alt="Lanna em seu ensaio de 15 anos" loading="lazy" width="700" height="1050">
-          <span class="gallery-item-icon" aria-hidden="true"><i class="fas fa-expand"></i></span>
+          <span class="gallery-item-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></span>
         </button>
         <button class="gallery-item" type="button" data-full="img/web/Lanna_15_anos-112-full.jpg" aria-label="Ampliar foto de Lanna 5">
           <img src="img/web/Lanna_15_anos-112-thumb.jpg" alt="Lanna em seu ensaio de 15 anos" loading="lazy" width="700" height="1050">
-          <span class="gallery-item-icon" aria-hidden="true"><i class="fas fa-expand"></i></span>
+          <span class="gallery-item-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></span>
         </button>
         <button class="gallery-item" type="button" data-full="img/web/Lanna_15_anos-125-full.jpg" aria-label="Ampliar foto de Lanna 6">
           <img src="img/web/Lanna_15_anos-125-thumb.jpg" alt="Lanna em seu ensaio de 15 anos" loading="lazy" width="700" height="1050">
-          <span class="gallery-item-icon" aria-hidden="true"><i class="fas fa-expand"></i></span>
+          <span class="gallery-item-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></span>
         </button>
         <button class="gallery-item" type="button" data-full="img/web/Lanna_15_anos-135-full.jpg" aria-label="Ampliar foto de Lanna 7">
           <img src="img/web/Lanna_15_anos-135-thumb.jpg" alt="Lanna em seu ensaio de 15 anos" loading="lazy" width="700" height="1050">
-          <span class="gallery-item-icon" aria-hidden="true"><i class="fas fa-expand"></i></span>
+          <span class="gallery-item-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></span>
         </button>
         <button class="gallery-item" type="button" data-full="img/web/Lanna_15_anos-141-full.jpg" aria-label="Ampliar foto de Lanna 8">
           <img src="img/web/Lanna_15_anos-141-thumb.jpg" alt="Lanna em seu ensaio de 15 anos" loading="lazy" width="700" height="1050">
-          <span class="gallery-item-icon" aria-hidden="true"><i class="fas fa-expand"></i></span>
+          <span class="gallery-item-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></span>
         </button>
         <button class="gallery-item" type="button" data-full="img/web/Lanna_15_anos-144-full.jpg" aria-label="Ampliar foto de Lanna 9">
           <img src="img/web/Lanna_15_anos-144-thumb.jpg" alt="Lanna em seu ensaio de 15 anos" loading="lazy" width="700" height="467">
-          <span class="gallery-item-icon" aria-hidden="true"><i class="fas fa-expand"></i></span>
+          <span class="gallery-item-icon" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></span>
         </button>
       </div>
     </section>
@@ -183,22 +208,22 @@
     <section class="content-section fade-in" aria-label="Informações adicionais">
       <div class="info-cards">
         <div class="info-card">
-          <i class="fas fa-star info-icon" aria-hidden="true"></i>
+          <svg class="info-icon icon" aria-hidden="true" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor"><path d="M12 2l2.9 6.26 6.9.6-5.2 4.6 1.6 6.74L12 16.9 5.8 20.2l1.6-6.74-5.2-4.6 6.9-.6L12 2z"/></svg>
           <p class="info-title">Traje</p>
           <p class="info-value">Esporte Fino</p>
         </div>
         <div class="info-card">
-          <i class="fas fa-clock info-icon" aria-hidden="true"></i>
+          <svg class="info-icon icon" aria-hidden="true" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           <p class="info-title">Início</p>
           <p class="info-value">19h45</p>
         </div>
         <div class="info-card">
-          <i class="fas fa-music info-icon" aria-hidden="true"></i>
+          <svg class="info-icon icon" aria-hidden="true" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor"><path d="M9 18V5l11-2v13" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="17.5" cy="16" r="2.5"/></svg>
           <p class="info-title">Valsa &amp; Parabéns</p>
           <p class="info-value">23h00</p>
         </div>
         <div class="info-card">
-          <i class="fas fa-moon info-icon" aria-hidden="true"></i>
+          <svg class="info-icon icon" aria-hidden="true" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor"><path d="M20.7 15.6A9 9 0 1 1 8.4 3.3a7 7 0 0 0 12.3 12.3z"/></svg>
           <p class="info-title">Encerramento</p>
           <p class="info-value">2h00</p>
         </div>
@@ -208,7 +233,7 @@
     <!-- NOTICE -->
     <section class="content-section fade-in">
       <p class="notice-text">
-        <i class="fas fa-info-circle" aria-hidden="true"></i>
+        <svg class="notice-icon icon" aria-hidden="true" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><line x1="12" y1="11" x2="12" y2="16" stroke-linecap="round"/><circle cx="12" cy="7.5" r="0.9" fill="currentColor" stroke="none"/></svg>
         Para melhor organização, maiores de idade usarão pulseira para bebidas com álcool.
       </p>
     </section>
@@ -224,23 +249,23 @@
       </div>
     </section>
 
-    <div style="height: 95px;"></div>
+    <div class="bottom-spacer"></div>
   </main>
 
   <!-- LIGHTBOX -->
   <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Foto ampliada">
     <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Fechar">
-      <i class="fas fa-times" aria-hidden="true"></i>
+      <svg class="icon" aria-hidden="true" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/></svg>
     </button>
     <button class="lightbox-nav lightbox-prev" id="lightbox-prev" type="button" aria-label="Foto anterior">
-      <i class="fas fa-chevron-left" aria-hidden="true"></i>
+      <svg class="icon" aria-hidden="true" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 6 9 12 15 18"/></svg>
     </button>
     <div class="lightbox-stage">
       <img class="lightbox-img" id="lightbox-img" src="" alt="">
       <span class="lightbox-counter" id="lightbox-counter" aria-hidden="true"></span>
     </div>
     <button class="lightbox-nav lightbox-next" id="lightbox-next" type="button" aria-label="Próxima foto">
-      <i class="fas fa-chevron-right" aria-hidden="true"></i>
+      <svg class="icon" aria-hidden="true" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg>
     </button>
   </div>
 
@@ -250,7 +275,7 @@
       <a href="https://www.google.com/maps/search/Espaço+Malibu+Av+Dr+Francisco+Gugliano+2600+Royal+Park+Ribeirão+Preto+SP"
          target="_blank" rel="noopener noreferrer"
          class="fixed-btn fixed-btn--map" aria-label="Ver no mapa">
-        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+        <svg class="icon" aria-hidden="true" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor"><path d="M12 2C7.6 2 4 5.6 4 10c0 5.4 6.6 11.2 7.3 11.8a1 1 0 0 0 1.4 0C13.4 21.2 20 15.4 20 10c0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
       </a>
       <span class="fixed-label">Local</span>
     </div>
@@ -258,23 +283,28 @@
       <a href="https://wa.me/5516997647740?text=Olá!%20Confirmo%20minha%20presença%20na%20festa%20de%2015%20anos%20da%20Lanna!%20Meu%20nome%20completo%20é%3A%20"
          target="_blank" rel="noopener noreferrer"
          class="fixed-btn fixed-btn--whatsapp" aria-label="Confirmar presença pelo WhatsApp">
-        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+        <svg class="icon" aria-hidden="true" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.5.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.3-.4.1-.2 0-.4 0-.5C11 9.1 10.5 7.9 10.3 7.4c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.1-.2-.2-.5-.3z"/><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.1l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
       </a>
       <span class="fixed-label">Confirmar</span>
     </div>
     <div class="fixed-item">
       <button class="fixed-btn fixed-btn--music" id="music-control"
               aria-label="Tocar ou pausar música" aria-pressed="false">
-        <i class="fas fa-play" id="music-icon" aria-hidden="true"></i>
+        <svg class="icon" id="music-icon" aria-hidden="true" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor">
+          <polygon class="icon-play" points="8,5 19,12 8,19"></polygon>
+          <g class="icon-pause" style="display:none"><rect x="7" y="5" width="4" height="14"/><rect x="13" y="5" width="4" height="14"/></g>
+        </svg>
       </button>
       <span class="fixed-label">Música</span>
     </div>
   </nav>
 
-  <!-- Adicione: <source src="assets/musica.mp3" type="audio/mpeg"> -->
-  <audio id="bg-music" loop></audio>
+  <audio id="bg-music" loop>
+    <source src="mp3/musica.mp3" type="audio/mpeg">
+  </audio>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </div><!-- /.site-wrapper -->
+
   <script>
     document.addEventListener('DOMContentLoaded', () => {
 
@@ -289,13 +319,51 @@
         sc.appendChild(el);
       }
 
+      // Borboletas
+      const bc = document.getElementById('butterflies-container');
+      const butterflyColors = ['#5B2D8E', '#8B5CF6', '#C084FC'];
+      const baseW = 30, baseH = 22;
+      for (let i = 0; i < 4; i++) {
+        const color    = butterflyColors[i % butterflyColors.length];
+        const left     = (5 + Math.random() * 70).toFixed(1);
+        const top      = (8 + Math.random() * 65).toFixed(1);
+        const duration = (16 + Math.random() * 10).toFixed(1);
+        const delay    = (Math.random() * 12).toFixed(1);
+        const scale    = (0.7 + Math.random() * 0.6).toFixed(2);
+        const flip     = Math.random() > 0.5 ? -1 : 1;
+        const w = (baseW * scale).toFixed(1);
+        const h = (baseH * scale).toFixed(1);
+
+        const wrapper = document.createElement('div');
+        wrapper.className = 'butterfly';
+        wrapper.style.cssText = `left:${left}%; top:${top}%; animation-duration:${duration}s; animation-delay:${delay}s;`;
+        wrapper.innerHTML = `
+          <svg viewBox="0 0 64 48" width="${w}" height="${h}" style="display:block; transform:scaleX(${flip});">
+            <g class="bfly-wing" style="fill:${color}">
+              <path d="M32 24 C20 4, 2 2, 4 16 C5 26, 18 30, 32 24 Z"/>
+              <path d="M32 24 C22 30, 8 34, 10 42 C12 46, 24 40, 32 26 Z" opacity="0.8"/>
+            </g>
+            <g class="bfly-wing" style="fill:${color}">
+              <path d="M32 24 C44 4, 62 2, 60 16 C59 26, 46 30, 32 24 Z"/>
+              <path d="M32 24 C42 30, 56 34, 54 42 C52 46, 40 40, 32 26 Z" opacity="0.8"/>
+            </g>
+            <line x1="32" y1="15" x2="32" y2="35" stroke="${color}" stroke-width="2" stroke-linecap="round"/>
+          </svg>`;
+        bc.appendChild(wrapper);
+      }
+
       // Intro card
       const overlay = document.getElementById('intro-overlay');
       const wrapper = document.getElementById('intro-card-wrapper');
-      wrapper.addEventListener('click', () => {
+      function openInvite() {
+        if (wrapper.classList.contains('opening')) return;
         wrapper.classList.add('opening');
         setTimeout(() => overlay.classList.add('hidden'), 900);
         tryPlayMusic();
+      }
+      wrapper.addEventListener('click', openInvite);
+      wrapper.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openInvite(); }
       });
 
       // Fade-in observer
@@ -307,26 +375,41 @@
       // Countdown — 10/10/2026 19:45
       const eventDate = new Date('2026-10-10T19:45:00');
       const pad = n => String(Math.floor(n)).padStart(2, '0');
+      function setCount(id, value) {
+        const el = document.getElementById(id);
+        if (el.textContent === value) return;
+        el.textContent = value;
+        el.classList.remove('tick');
+        void el.offsetWidth;
+        el.classList.add('tick');
+      }
       function tick() {
         const diff = eventDate - new Date();
         if (diff <= 0) { document.getElementById('countdown').innerHTML = '<p class="count-celebrate">🎉 É hoje!</p>'; return; }
-        document.getElementById('cd-days').textContent  = pad(diff / 864e5);
-        document.getElementById('cd-hours').textContent = pad((diff % 864e5) / 36e5);
-        document.getElementById('cd-mins').textContent  = pad((diff % 36e5) / 6e4);
-        document.getElementById('cd-secs').textContent  = pad((diff % 6e4) / 1e3);
+        setCount('cd-days',  pad(diff / 864e5));
+        setCount('cd-hours', pad((diff % 864e5) / 36e5));
+        setCount('cd-mins',  pad((diff % 36e5) / 6e4));
+        setCount('cd-secs',  pad((diff % 6e4) / 1e3));
       }
       tick(); setInterval(tick, 1000);
 
       // Music
-      const music   = document.getElementById('bg-music');
-      const btn     = document.getElementById('music-control');
-      const ico     = document.getElementById('music-icon');
-      let playing   = false;
+      const music     = document.getElementById('bg-music');
+      const btn       = document.getElementById('music-control');
+      const ico       = document.getElementById('music-icon');
+      const icoPlay   = ico.querySelector('.icon-play');
+      const icoPause  = ico.querySelector('.icon-pause');
+      let playing     = false;
+      function setPlayingUI(isPlaying) {
+        icoPlay.style.display  = isPlaying ? 'none'  : 'block';
+        icoPause.style.display = isPlaying ? 'block' : 'none';
+        btn.setAttribute('aria-pressed', String(isPlaying));
+      }
       function tryPlayMusic() {
-        music.play().then(() => { playing = true; ico.classList.replace('fa-play','fa-pause'); btn.setAttribute('aria-pressed','true'); }).catch(()=>{});
+        music.play().then(() => { playing = true; setPlayingUI(true); }).catch(()=>{});
       }
       btn.addEventListener('click', () => {
-        if (playing) { music.pause(); ico.classList.replace('fa-pause','fa-play'); btn.setAttribute('aria-pressed','false'); playing = false; }
+        if (playing) { music.pause(); playing = false; setPlayingUI(false); }
         else tryPlayMusic();
       });
 
@@ -347,6 +430,7 @@
       const btnPrev       = document.getElementById('lightbox-prev');
       const btnNext       = document.getElementById('lightbox-next');
       let currentIndex    = 0;
+      let lastTrigger     = null;
 
       function showPhoto(index) {
         currentIndex = (index + galleryItems.length) % galleryItems.length;
@@ -355,17 +439,20 @@
         lightboxImg.alt = item.querySelector('img').alt;
         lightboxCount.textContent = `${currentIndex + 1} / ${galleryItems.length}`;
       }
-      function openLightbox(index) {
+      function openLightbox(index, triggerEl) {
+        lastTrigger = triggerEl || document.activeElement;
         showPhoto(index);
         lightbox.classList.add('active');
         document.body.classList.add('lightbox-open');
+        btnClose.focus();
       }
       function closeLightbox() {
         lightbox.classList.remove('active');
         document.body.classList.remove('lightbox-open');
+        if (lastTrigger) lastTrigger.focus();
       }
 
-      galleryItems.forEach((item, i) => item.addEventListener('click', () => openLightbox(i)));
+      galleryItems.forEach((item, i) => item.addEventListener('click', () => openLightbox(i, item)));
       btnClose.addEventListener('click', closeLightbox);
       btnPrev.addEventListener('click', () => showPhoto(currentIndex - 1));
       btnNext.addEventListener('click', () => showPhoto(currentIndex + 1));

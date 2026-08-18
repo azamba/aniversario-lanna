@@ -22,7 +22,11 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 
+.icon { display: inline-block; vertical-align: -0.125em; flex-shrink: 0; }
+.bottom-spacer { height: 95px; }
+
 body {
+  position: relative;
   background-color: #F6F3F7;
   color: var(--text);
   font-family: var(--font-ui);
@@ -30,14 +34,42 @@ body {
   overflow-x: hidden;
 }
 
+/* ── SITE WRAPPER / BORDA DUPLA ───────────────── */
+.site-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.site-border {
+  position: absolute;
+  inset: 10px;
+  border: 1.5px solid var(--purple);
+  border-radius: 20px;
+  pointer-events: none;
+  z-index: 500;
+}
+.site-border::after {
+  content: '';
+  position: absolute;
+  inset: 6px;
+  border: 1px solid var(--purple-light);
+  border-radius: 14px;
+}
+
+@media (max-width: 600px) {
+  .site-border { inset: 7px; border-radius: 16px; }
+  .site-border::after { inset: 5px; border-radius: 11px; }
+}
+
 .bg-image {
   position: fixed;
   inset: 0;
   z-index: 0;
-  background-image: url('background.png');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+  background-image: url('background.png?v=2');
+  background-repeat: repeat-y;
+  background-position: top center;
+  background-size: 100% auto;
 }
 
 body::before {
@@ -65,6 +97,37 @@ body::before {
   50%  { transform: translateY(-35px) rotate(200deg) scale(1.1); }
   88%  { opacity: 0.35; }
   100% { transform: translateY(-70px) rotate(360deg) scale(0.3); opacity: 0; }
+}
+
+/* ── BORBOLETAS ───────────────────────────────── */
+.butterflies-container {
+  position: fixed; inset: 0;
+  pointer-events: none; z-index: 2; overflow: hidden;
+}
+.butterfly {
+  position: absolute;
+  opacity: 0;
+  animation-name: butterfly-fly;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.bfly-wing {
+  transform-box: view-box;
+  transform-origin: 32px 24px;
+  animation: wing-flap 0.6s ease-in-out infinite;
+}
+@keyframes wing-flap {
+  0%, 100% { transform: scaleX(1); }
+  50%      { transform: scaleX(0.35); }
+}
+@keyframes butterfly-fly {
+  0%   { transform: translate(0, 0) rotate(-4deg); opacity: 0; }
+  8%   { opacity: 0.9; }
+  30%  { transform: translate(9vw, -5vh) rotate(10deg); }
+  50%  { transform: translate(17vw, 3vh) rotate(-8deg); }
+  72%  { transform: translate(24vw, -6vh) rotate(12deg); }
+  92%  { opacity: 0.9; }
+  100% { transform: translate(32vw, 1vh) rotate(-4deg); opacity: 0; }
 }
 
 /* ── INTRO OVERLAY ────────────────────────────── */
@@ -103,35 +166,50 @@ body::before {
 .intro-card {
   position: relative;
   width: min(340px, 90vw);
-  padding: 36px 24px 32px;
+  padding: 44px 26px 34px;
   text-align: center;
   background: linear-gradient(155deg, #fffcff 0%, #f9f4ff 55%, #faf7ff 100%);
-  border: 1.5px solid rgba(139, 92, 246, 0.3);
+  border: 1.5px solid rgba(139, 92, 246, 0.45);
   box-shadow:
-    0 0 0 5px rgba(192, 132, 252, 0.06),
-    0 0 0 6px rgba(139, 92, 246, 0.2),
-    0 30px 80px rgba(0,0,0,0.55),
+    0 30px 70px rgba(20, 4, 48, 0.5),
     inset 0 1px 0 rgba(255,255,255,0.95);
-  border-radius: 3px;
+  border-radius: 10px;
   transition: transform 0.3s;
+}
+.intro-card::before {
+  content: '';
+  position: absolute;
+  inset: 7px;
+  border: 1px solid rgba(192, 132, 252, 0.4);
+  border-radius: 6px;
+  pointer-events: none;
 }
 .intro-card:hover { transform: translateY(-4px); }
 
-.card-corner {
-  position: absolute; color: var(--purple-mid); font-size: 1rem; opacity: 0.55;
+/* Borboleta pousada, mesma forma das borboletas animadas do fundo */
+.card-butterfly {
+  position: absolute;
+  top: -17px; left: 50%;
+  width: 42px; height: 31px;
+  color: var(--purple);
+  transform: translateX(-50%) rotate(-8deg);
+  filter: drop-shadow(0 3px 6px rgba(91,45,142,0.3));
 }
-.card-corner--tl { top: 8px; left: 10px; }
-.card-corner--tr { top: 8px; right: 10px; }
-.card-corner--bl { bottom: 8px; left: 10px; }
-.card-corner--br { bottom: 8px; right: 10px; }
+.card-butterfly .bfly-wing { animation-duration: 2.6s; }
+
+/* Ramos nos quatro cantos, no mesmo traço botânico do background */
+.card-vine {
+  position: absolute;
+  width: 32px; height: 32px;
+  color: var(--purple-mid);
+  opacity: 0.75;
+}
+.card-vine--tl { top: 8px; left: 8px; }
+.card-vine--tr { top: 8px; right: 8px; transform: scaleX(-1); }
+.card-vine--bl { bottom: 8px; left: 8px; transform: scaleY(-1); }
+.card-vine--br { bottom: 8px; right: 8px; transform: scale(-1, -1); }
 
 .card-body-inner { display: flex; flex-direction: column; align-items: center; gap: 6px; }
-
-.card-save-the-date {
-  font-family: var(--font-display);
-  font-size: 0.6rem; text-transform: uppercase; letter-spacing: 3.5px;
-  color: var(--purple-mid); font-weight: 500;
-}
 
 .card-rule {
   display: flex; align-items: center; gap: 8px; width: 85%;
@@ -153,8 +231,6 @@ body::before {
   animation: name-shimmer 4s ease-in-out infinite;
   line-height: 1.6; padding-top: 0.3em;
 }
-
-.card-heart { font-size: 1.1rem; color: var(--purple-mid); opacity: 0.65; }
 
 .card-celebra {
   font-family: var(--font-body); font-style: italic;
@@ -390,6 +466,12 @@ body::before {
   font-family: var(--font-display);
   font-size: clamp(1.5rem, 6vw, 2.2rem);
   color: var(--purple); font-weight: 500; line-height: 1; display: block;
+}
+.count-num.tick { animation: count-tick 0.4s ease; }
+@keyframes count-tick {
+  0%   { transform: scale(1); opacity: 1; }
+  35%  { transform: scale(1.18); opacity: 0.6; }
+  100% { transform: scale(1); opacity: 1; }
 }
 .count-lbl {
   font-family: var(--font-ui); font-size: 0.68rem;
@@ -639,13 +721,13 @@ body.lightbox-open { overflow: hidden; }
 /* NOTICE */
 .notice-text {
   font-family: var(--font-ui); font-size: clamp(1.05rem, 3.5vw, 1.5rem);
-  color: var(--text-light); font-weight: 400;
+  color: var(--text-muted); font-weight: 400;
   background: #f3eeff; border: 1px solid rgba(139,92,246,0.2);
   border-radius: 10px; padding: 12px 18px;
   max-width: 420px; margin: 0 auto;
   line-height: 1.6; text-align: center;
 }
-.notice-text .fa-info-circle { color: var(--purple-mid); margin-right: 6px; }
+.notice-text .notice-icon { color: var(--purple-mid); margin-right: 6px; }
 
 /* CLOSING */
 .closing-card {
@@ -739,7 +821,7 @@ body.lightbox-open { overflow: hidden; }
 /* ── RESPONSIVE ───────────────────────────────── */
 @media (max-width: 768px) {
   .bg-image {
-    background-image: url('background_celular.png');
+    background-image: url('background_celular.png?v=2');
   }
 }
 
